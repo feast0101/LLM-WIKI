@@ -5,3 +5,8 @@ tools/*.egg-info/
 *.bak
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Virtual environments
+.venv/
+venv/
+path/

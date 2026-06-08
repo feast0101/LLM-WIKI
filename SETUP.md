@@ -87,8 +87,10 @@ Keep Obsidian open during ingestion. In Graph View (`Ctrl+G`) watch new Entity a
 Beyond ~200 pages, `qmd` is worth installing for semantic search:
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install qmd
-qmd index wiki/
+find wiki -name "*.md" -exec qmd document add --collection wiki --document-id {} --markdown-file {} \;
 ```
 
 After that, `/search` uses `qmd` automatically instead of grep.
